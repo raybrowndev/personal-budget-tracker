@@ -16,11 +16,9 @@ This project is a **personal budget dashboard** where a user can track income, e
 
 The UI is:
 
-- Built with **Next.js App Router** (`app/` directory)
+- Built with **Next.js App Router** 
 - Styled using **Tailwind CSS**
-- Enhanced with **shadcn/ui** components (e.g. `Button`, `Card`)
-- Designed with a **white theme**, **glassmorphism** accents and **soft rounded corners**
-- Responsive: sidebar on desktop, compact top bar on mobile
+- Enhanced with **shadcn/ui** components 
 
 ---
 
@@ -82,15 +80,14 @@ The UI is:
 - **TypeScript**
 - **Tailwind CSS**
 - **shadcn/ui** (for ready-made UI primitives like `Button` and `Card`)
-- **Inter font** from Google Fonts (clean sans-serif, slightly bold accents)
 
 ---
 
-## 🚀 Getting Started
+<!-- ## 🚀 Getting Started
 
 ### 1. Clone & Install
 
 ```bash
 git clone <your-repo-url>
 cd <your-repo-folder>
-npm install
+npm install -->
