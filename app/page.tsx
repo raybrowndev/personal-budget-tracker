@@ -2,6 +2,7 @@
 import { Quicksand, Nunito } from "next/font/google"; 
 import Sidebar from "@/components/sidebar"
 import { Button } from "@/components/ui/button"
+import Link from "next/link";
 
 
 // PAGE START
@@ -29,7 +30,11 @@ export default function Home() {
           <Button className="bg-emerald-600 text-white hover:bg-emerald-500 cursor-pointer">
             Get Started
           </Button>
+          <Link
+          href="https://github.com/raybrowndev/personal-budget-tracker" target="_blank">
+          
           <Button variant="outline" className="cursor-pointer">Created by Ray Brown 👋</Button>
+          </Link>
         </div>
       </main>
     </div>

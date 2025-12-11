@@ -10,6 +10,8 @@
 
 ---
 
+![app-screenshot-2](/public/personal-budget-tracker-screenshot-2.0.png "App Screenshot 2.0")
+
 ## 🧾 Overview
 
 This project is a **personal budget dashboard** where a user can track income, expenses and savings in a simple, visual way.
