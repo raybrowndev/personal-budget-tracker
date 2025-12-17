@@ -5,7 +5,8 @@ import Link from "next/link";
 import { Nunito, Quicksand } from "next/font/google"; 
 import { usePathname } from "next/navigation";
 import { PiSquaresFour } from "react-icons/pi";
-import { FaFolder, FaReceipt, FaRegChartBar, FaRegCreditCard, FaRegClone } from "react-icons/fa";
+import { FaFolder, FaReceipt, FaRegChartBar } from "react-icons/fa";
+import { FaGear } from "react-icons/fa6";
 
 
 const nunito = Nunito({ subsets: ["latin"], variable: "--logo-font" }); 
@@ -17,8 +18,7 @@ export default function Sidebar() {
     const menuItems = [
         { label: "Dashboard", icon: PiSquaresFour, href: "/"},
         { label: "Budget", icon: FaRegChartBar, href: "/budget"},
-        { label: "Income", icon: FaRegCreditCard, href: "/income"},
-        { label: "Expenses", icon: FaReceipt, href: "/expenses" },
+        { label: "Transactions", icon: FaReceipt, href: "/transactions" },
         { label: "Savings", icon: FaFolder, href: "/savings" }
     ]
 
@@ -64,9 +64,9 @@ return (
 
         <Link
           href="/settings"
-          className="mt-auto rounded-md px-3 py-2 text-sm font-semibold text-zinc-500 transition hover:bg-zinc-100 hover:text-emerald-600 dark:hover:bg-zinc-800"
+          className="mt-auto rounded-md px-3 py-2 text-l font-semibold text-zinc-500 transition hover:bg-zinc-100 hover:text-emerald-600 dark:hover:bg-zinc-800 inline-flex gap-2 "
         >
-          Settings
+          <FaGear /> Settings
         </Link>
       </aside>
 
