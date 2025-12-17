@@ -3,6 +3,7 @@
 import { Quicksand } from "next/font/google"; 
 import Sidebar from "@/components/sidebar"
 import { Button } from "@/components/ui/button"
+import { FaPlus } from "react-icons/fa6";
 
 const quicksand = Quicksand({ subsets: ["latin"], variable: "--font-sans" }); 
 
@@ -40,7 +41,7 @@ return (
     >
     <Sidebar />
     <main className="flex flex-1 flex-col items-start justify-center gap-6 px-16 py-16 text-left">
-        <p className="text-sm uppercase tracking-widest text-emerald-600">Version 2.0</p>
+        <p className="text-sm uppercase tracking-widest text-emerald-600">get started</p>
         <h1 className="max-w-xl text-4xl font-semibold leading-tight text-black dark:text-zinc-50">
           Budget
         </h1>
@@ -49,7 +50,7 @@ return (
         </p>
 
         <div className="flex flex-wrap gap-4">
-          <Button variant="outline" className="cursor-pointer">Start Budget</Button>
+          <Button variant="outline" className="cursor-pointer"><FaPlus />Add Transaction</Button>
         </div>
       </main>
     </div>

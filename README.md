@@ -1,16 +1,19 @@
 # My Budget Dashboard
 
 [![Framework: Next.js](https://img.shields.io/badge/Framework-Next.js-000000?logo=nextdotjs&logoColor=white)](https://nextjs.org/)
-[![Styling: Tailwind CSS](https://img.shields.io/badge/Styling-Tailwind%20CSS-38B2AC?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-[![UI: shadcn/ui](https://img.shields.io/badge/UI-shadcn%2Fui-000000)](https://ui.shadcn.com/)
 [![Language: TypeScript](https://img.shields.io/badge/Language-TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
-> Personal budget dashboard built with Next.js (App Router), Tailwind CSS and shadcn/ui.  
-> Clean, white theme with soft glassmorphism and simple, intuitive layout.
+[![Styling: Tailwind CSS](https://img.shields.io/badge/Styling-Tailwind%20CSS-38B2AC?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![UI: shadcn/ui](https://img.shields.io/badge/UI-shadcn%2Fui-000000)](https://ui.shadcn.com/)
+
+[![Backend: Supabase](https://img.shields.io/badge/Backend-Supabase-3FCF8E?logo=supabase&logoColor=white)](https://supabase.com/)
+
+> Personal budget dashboard built with Next.js (App Router), Tailwind CSS, Supabase Auth and shadcn/ui.
 
 ---
 
-![app-screenshot-2](/public/personal-budget-tracker-screenshot-2.0.png "App Screenshot 2.0")
+![budget-page-screenshot](/public/budget_page_1.0.webp "Budget Page")
+![login-page-screenshot](/public/login_supabase_1.0.webp "Supabase Login Page")
 
 ## 🧾 Overview
 
@@ -25,8 +28,6 @@ The UI is:
 ---
 
 ## ✨ Planned Features
-
-> Some of these are not fully implemented yet — this is the roadmap for the app.
 
 - **Dashboard overview**
   - Summary cards showing total income, total expenses and total savings
