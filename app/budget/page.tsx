@@ -3,8 +3,6 @@
 import { Quicksand } from "next/font/google"; 
 import Sidebar from "@/components/sidebar"
 import { Button } from "@/components/ui/button"
-import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts"
-import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart"
 
 const quicksand = Quicksand({ subsets: ["latin"], variable: "--font-sans" }); 
 
@@ -32,7 +30,13 @@ export default function BudgetPage() {
     
 return (
     <div
-      className={`flex min-h-screen bg-zinc-50 font-sans dark:bg-black ${quicksand.variable}`}
+      className={`flex min-h-screen w-screen font-sans ${quicksand.variable}`}
+      style={{
+        backgroundImage: 'url("/background.svg")',
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+      }}
     >
     <Sidebar />
     <main className="flex flex-1 flex-col items-start justify-center gap-6 px-16 py-16 text-left">
@@ -43,39 +47,6 @@ return (
         <p className="max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
           Take control of your personal finances, set money goals, and get transparency on your spending habits.
         </p>
-
-        <ChartContainer
-          config={monthlyBudgetConfig}
-          className="w-full rounded-2xl border border-zinc-200 bg-white/80 p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-900/60"
-        >
-          <BarChart data={monthlyBudgetData}>
-            <CartesianGrid strokeDasharray="3 3" vertical={false} />
-            <XAxis
-              dataKey="category"
-              tickLine={false}
-              axisLine={false}
-              tickMargin={8}
-            />
-            <YAxis
-              tickLine={false}
-              axisLine={false}
-              tickFormatter={(value) => `$${value}`}
-            />
-            <ChartTooltip content={<ChartTooltipContent />} />
-            <Bar
-              dataKey="allocated"
-              fill="var(--color-allocated)"
-              radius={[4, 4, 0, 0]}
-              maxBarSize={40}
-            />
-            <Bar
-              dataKey="spent"
-              fill="var(--color-spent)"
-              radius={[4, 4, 0, 0]}
-              maxBarSize={40}
-            />
-          </BarChart>
-        </ChartContainer>
 
         <div className="flex flex-wrap gap-4">
           <Button variant="outline" className="cursor-pointer">Start Budget</Button>

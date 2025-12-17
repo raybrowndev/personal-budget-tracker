@@ -13,7 +13,13 @@ export default function Home() {
 
   return (
     <div
-      className={`flex min-h-screen bg-zinc-50 font-sans dark:bg-black ${quicksand.variable}`}
+      className={`flex min-h-screen w-screen font-sans ${quicksand.variable}`}
+      style={{
+        backgroundImage: 'url("/background.svg")',
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+      }}
     >
 
       <Sidebar />
