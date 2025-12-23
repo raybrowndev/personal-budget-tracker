@@ -1,7 +1,8 @@
 "use client";
-
+import { Quicksand } from "next/font/google"; 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Github, Loader2, Mail } from "lucide-react";
 
 import { createClient } from "@/lib/supabase/client";
@@ -11,6 +12,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Checkbox } from "@/components/ui/checkbox";
+
+const quicksand = Quicksand({ subsets: ["latin"], variable: "--font-sans" }); 
 
 export default function LoginPage() {
   const supabase = createClient();
@@ -33,27 +36,31 @@ export default function LoginPage() {
     // Fake for now — you’ll wire this later if you want email/password.
   }
 
+ 
+
   return (
-    <div className="min-h-screen overflow-hidden">
-
-        <main className="gap-6 px-16 py-16 text-left">
+    <div className="relative w-full min-h-screen overflow-hidden bg-green-200 p-5">
+      {/* Subtle background */}  
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-background " />
+      <div className="pointer-events-none absolute -top-24 left-1/2 h-64 w-[520px] -translate-x-1/2 rounded-full bg-green-500/10 blur-3xl" />
+      
+      <div className="pointer-events-none absolute -bottom-24 left-1/3 h-64 w-[520px] -translate-x-1/2 rounded-full bg-green-500/10 blur-3xl" />
+      
+      <main className="relative z-10 flex min-h-screen flex-col gap-10 px-6 py-12 text-left lg:flex-row lg:gap-0 lg:px-16 lg:py-16 w-full">
+        {/* <h1 className={`text-6xl font-bold font-sans ${quicksand.variable}`}>Sign in</h1> */}
         
-      {/* Subtle background */}
-      <div className="absolute inset-0 bg-linear-to-b from-background via-background to-muted/30" />
-      <div className="absolute -top-24 left-1/2 h-64 w-[520px] -translate-x-1/2 rounded-full bg-green-500/10 blur-3xl" />
-      <div className="absolute -bottom-24 left-1/3 h-64 w-[520px] -translate-x-1/2 rounded-full bg-green-500/10 blur-3xl" />
-
-      <div className="relative mx-auto flex min-h-screen w-full max-w-md items-center justify-center px-4">
-        <Card className="w-full border-white/10 bg-background/60 backdrop-blur-xl">
-          <CardHeader className="space-y-2">
-            <div className=" items-center justify-between">
-              <CardTitle className="text-xl">Login</CardTitle>
+        
+        <div className="flex w-full items-center justify-center lg:basis-[30%]">
+          
+          <Card className="w-full border-gray-500/20 bg-background/90 backdrop-blur-xl">
+            <CardHeader className="space-y-2">
+              <div className=" items-center justify-between">
+                <CardTitle className="text-4xl font-bold">Welcome!</CardTitle>
             </div>
             <CardDescription>
               Sign in to view your dashboard, transactions, and savings goals.
             </CardDescription>
           </CardHeader>
-
           <CardContent className="space-y-5">
             {/* OAuth */}
             <Button
@@ -126,30 +133,26 @@ export default function LoginPage() {
               </div>
 
             </form>
+            
           </CardContent>
+</Card>
+        </div>
 
-          {/* <CardFooter className="flex flex-col gap-2">
-            <p className="text-center text-xs text-muted-foreground">
-              By continuing, you agree to our{" "}
-              <Link href="#" onClick={(e) => e.preventDefault()} className="underline underline-offset-4">
-                Terms
-              </Link>{" "}
-              and{" "}
-              <Link href="#" onClick={(e) => e.preventDefault()} className="underline underline-offset-4">
-                Privacy Policy
-              </Link>
-              .
-            </p>
-
-            <p className="text-center text-xs text-muted-foreground">
-              Tip: For a personal project, GitHub login is the easiest + most reliable.
-            </p>
-          </CardFooter> */}
-        </Card>
-      </div>
-        
+        <div className="flex w-full items-center justify-end lg:basis-[70%]">
+          <div className="w-full max-w-2xl">
+            <Image
+              src="/piggy-bank.png"
+              alt="piggy bank illustration"
+              width={1200}
+              height={900}
+              priority
+              className="mx-auto h-auto max-h-[600px] w-full object-contain"
+            />
+            
+          </div>
+        </div>
       </main>
-
+      
     </div>
   );
 }
@@ -192,4 +195,3 @@ export default function LoginPage() {
 //     </div>
 //   );
 // }
-
