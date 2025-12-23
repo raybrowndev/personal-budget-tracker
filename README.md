@@ -13,7 +13,7 @@
 ---
 
 ![budget-page-screenshot](/public/budget_page_1.0.webp "Budget Page")
-![login-page-screenshot](/public/login_supabase_1.0.webp "Supabase Login Page")
+![login-page-screenshot](/public/login_supabase_1.0.png "Supabase Login Page")
 
 ## 🧾 Overview
 
